@@ -4,7 +4,7 @@ k = 0
 h = int(h)
 canvasArea = w * h
 count = int(input())
-arr = [[0]*h for i in range(w)]
+arr = [[0] * h for i in range(w)]
 for i in range(count):
     square = [int(l) for l in input().split()]
 for i in range(square[0], square[2]):
