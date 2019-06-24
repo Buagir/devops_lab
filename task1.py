@@ -1,5 +1,5 @@
 a = int(input("Put your number: "))
-if ((a <= 20) and (a >= 1)):
+if a in range(1, 20):
     i = 0
     while i < a:
         print(i**2)
