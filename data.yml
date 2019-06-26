@@ -1,0 +1,9 @@
+apache_vhosts:
+  - servername: www.buagir.io
+    documentroot: /www/buagir
+    serveradmin: admb@buagir.io
+    directorypath: /usr/local/httpd/buagir
+  - servername: www.yaruk.me
+    documentroot: /www/yaruk
+    serveradmin: adm@yaruk.me
+    directorypath: /usr/local/httpd/yaruk
