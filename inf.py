@@ -31,7 +31,7 @@ f.write(prints)
 
 f = open("syslog.yml", "w")
 prinls = yaml.dumps({"Information:  "
-                                    "Version of python": sys.version,
+                                   "Version of python": sys.version,
                                     "Name of virt.env.": str(r)[2:],
                                     "Python exec. location": sys.executable,
                                     "Pip location": str(s)[2:],
