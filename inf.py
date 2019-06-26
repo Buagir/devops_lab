@@ -38,5 +38,5 @@ prinls = yaml.dumps({"Information:  "
                                     "Installed packeges": ipkg,
                                     "Site-packages location": sys.path,
                                     "$PYTHONPATH": str(p)[2:]
-                    }, default_flow_style=False, indent=4)
+                     }, default_flow_style=False, indent=4)
 f.write(prinls)
