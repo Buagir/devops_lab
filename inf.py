@@ -30,13 +30,13 @@ prints = json.dumps({
 f.write(prints)
 
 f = open("syslog.yml", "w")
-prinls = yaml.dumps({"Information:  "
+prinls = yaml.dumps({"Information: "
                                    "Version of python": sys.version,
-                                    "Name of virt.env.": str(r)[2:],
-                                    "Python exec. location": sys.executable,
-                                    "Pip location": str(s)[2:],
-                                    "Installed packeges": ipkg,
-                                    "Site-packages location": sys.path,
-                                    "$PYTHONPATH": str(p)[2:]
+                                   "Name of virt.env.": str(r)[2:],
+                                   "Python exec. location": sys.executable,
+                                   "Pip location": str(s)[2:],
+                                   "Installed packeges": ipkg,
+                                   "Site-packages location": sys.path,
+                                   "$PYTHONPATH": str(p)[2:]
                      }, default_flow_style=False, indent=4)
 f.write(prinls)
