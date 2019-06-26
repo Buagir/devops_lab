@@ -1,6 +1,7 @@
 import unittest
 from task2 import rev
 
+
 class Test(unittest.TestCase):
     def true_pal(self):
         """
@@ -25,5 +26,5 @@ class Test(unittest.TestCase):
         """
         False palindrome test 2
         """
-        data = 'a mmama m mama'
+        a = 'a mmama m mama'
         self.assertFalse(rev(a))
