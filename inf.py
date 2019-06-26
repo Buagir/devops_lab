@@ -19,24 +19,24 @@ for i in mr:
 
 f = open("syslog.json", "w")
 prints = json.dumps({
-    "Version of python": sys.version, #version of python
-    "Name of virt.env.": str(r)[2:],    #virtual environment (name)
-    "Python exec. location": sys.executable,  #python executable location
-    "Pip location": str(s)[2:],  #pip location
-    "Installed packeges": ipkg, #installed packages: name, version
-    "Site-packages location": sys.path, #site-packages location
-    "$PYTHONPATH": str(p)[2:] #pip location
+    "Version of python": sys.version,
+    "Name of virt.env.": str(r)[2:],
+    "Python exec. location": sys.executable,
+    "Pip location": str(s)[2:],
+    "Installed packeges": ipkg,
+    "Site-packages location": sys.path,
+    "$PYTHONPATH": str(p)[2:]
 }, indent=4)
 f.write(prints)
 
 f = open("syslog.yml", "w")
 prinls = yaml.dumps({"Information: "
-    "Version of python": sys.version, #version of python
-    "Name of virt.env.": str(r)[2:],    #virtual environment (name)
-    "Python exec. location": sys.executable,  #python executable location
-    "Pip location": str(s)[2:],  #pip location
-    "Installed packeges": ipkg, #installed packages: name, version
-    "Site-packages location": sys.path, #site-packages location
-    "$PYTHONPATH": str(p)[2:] #pip location
+    "Version of python": sys.version,
+    "Name of virt.env.": str(r)[2:],
+    "Python exec. location": sys.executable,
+    "Pip location": str(s)[2:],
+    "Installed packeges": ipkg,
+    "Site-packages location": sys.path,
+    "$PYTHONPATH": str(p)[2:]
 }, default_flow_style=False, indent=4)
 f.write(prinls)
