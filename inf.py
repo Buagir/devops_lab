@@ -8,8 +8,6 @@ venv = subprocess.Popen(["pyenv", "version"], stdout=subprocess.PIPE)
 r = venv.stdout.read().strip()
 piploc = subprocess.Popen(["which", "pip"], stdout=subprocess.PIPE)
 s = piploc.stdout.read()
-ppath = subprocess.Popen(["echo", "$PYTHONPATH"], stdout=subprocess.PIPE)
-p = ppath.stdout.read()
 
 ipkg = {}
 mr = get_installed_distributions()
@@ -25,7 +23,7 @@ prints = json.dumps({
     "Pip location": str(s)[2:],
     "Installed packeges": ipkg,
     "Site-packages location": sys.path,
-    "$PYTHONPATH": str(p)[2:]
+    "$PYTHONPATH": sys.prefix
 }, indent=4)
 f.write(prints)
 
@@ -37,6 +35,6 @@ prinls = yaml.dumps({"Information:  "
                      "Pip location": str(s)[2:],
                      "Installed packeges": ipkg,
                      "Site-packages location": sys.path,
-                     "$PYTHONPATH": str(p)[2:]
+                     "$PYTHONPATH": sys.prefix
                      }, default_flow_style=False, indent=4)
 f.write(prinls)
