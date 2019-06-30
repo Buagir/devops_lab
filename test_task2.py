@@ -28,3 +28,7 @@ class Test(unittest.TestCase):
         """
         a = 'a mmama m mama'
         self.assertFalse(rev(a))
+
+
+if __name__ == '__main__':
+    unittest.main()
