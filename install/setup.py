@@ -11,5 +11,5 @@ setup(
     install_requires=[
         'psutil'
     ],
-    include_package_data=False
+    include_package_data=True
 )
