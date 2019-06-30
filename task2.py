@@ -5,4 +5,6 @@ def rev():
         print("Your word is polindrom")
     else:
         print("Not polindrom")
+
+
 rev = rev()
