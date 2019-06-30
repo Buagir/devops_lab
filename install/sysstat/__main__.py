@@ -9,14 +9,14 @@ from datetime import datetime
 class stat:
     """Statistics information"""
 
-
-    def __init__(self):
-        self.cpu = str(psutil.cpu_percent())
-        self.mem = str(psutil.virtual_memory().percent)
-        self.ro = str(psutil.disk_io_counters().read_bytes >> 10)
-        self.rw = str(psutil.disk_io_counters().write_bytes >> 10)
-        self.snet = str(psutil.net_io_counters().bytes_sent >> 10)
-        self.rnet = str(psutil.net_io_counters().bytes_recv >> 10)
+    
+def __init__(self):
+    self.cpu = str(psutil.cpu_percent())
+    self.mem = str(psutil.virtual_memory().percent)
+    self.ro = str(psutil.disk_io_counters().read_bytes >> 10)
+    self.rw = str(psutil.disk_io_counters().write_bytes >> 10)
+    self.snet = str(psutil.net_io_counters().bytes_sent >> 10)
+    self.rnet = str(psutil.net_io_counters().bytes_recv >> 10)
 
 
 print(stat.__doc__)
@@ -29,7 +29,7 @@ outputformat = conf.get('begin', 'output')
 
 with open("statlog." + outputformat, "w") as f:
 
-i = 1
+    i = 1
 while i > 0:
     if outputformat == "json":
         prints = json.dumps({
