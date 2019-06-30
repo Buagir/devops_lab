@@ -7,6 +7,9 @@ parser.add_argument("-v", "--version", help="version script", version="ver. 0.1"
 parser.add_argument("-u", "--user", help="user", action="store_true")
 parser.add_argument("-o", "--open", help="How long pull request are opening", action="store_true")
 parser.add_argument("-l", "--label", help="Label of this pull request", action="store_true")
+parser.add_argument("-r", "--repo", help="Repository", action="store_true")
+parser.add_argument("-d", "--update", help="When the pullrequest was updated", action="store_true")
+parser.add_argument("-b", "--base", help="Base repository for forking", action="store_true")
 
 args = parser.parse_args()
 u = input("Enter login: ", )
@@ -30,3 +33,15 @@ if args.open:
 
 if args.label:
     print(url["head"]["label"])
+
+if args.repo:
+    print(url["repo"]["name"])
+
+if args.update:
+    date = url["updated_at"]
+    day = datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%SZ")
+    up = datetime.datetime.now() - day
+    print(up)
+
+if args.base:
+    print(url["base"]["html_url"])
