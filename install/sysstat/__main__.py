@@ -9,7 +9,7 @@ from datetime import datetime
 class stat:
     """Statistics information"""
 
-    
+
 def __init__(self):
     self.cpu = str(psutil.cpu_percent())
     self.mem = str(psutil.virtual_memory().percent)
