@@ -25,7 +25,7 @@ conf.read(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'conf.ini'))
 interval = conf.get('begin', 'interval')
 outputformat = conf.get('begin', 'output')
 
-f = open("statlog." + outputformat, "w")
+with open("statlog." + outputformat, "w") as f:
 
 i = 1
 while i > 0:
@@ -57,5 +57,5 @@ while i > 0:
         f.write('\n')
         time.sleep(int(interval))
         i += 1
-
+f.close()
 stat().func()
